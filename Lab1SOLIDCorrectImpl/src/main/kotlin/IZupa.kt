@@ -1,0 +1,3 @@
+interface IZupa {
+    fun przygotujZupe()
+}

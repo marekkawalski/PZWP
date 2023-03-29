@@ -1,4 +1,8 @@
-class Marchewka :Skladnik() {
+class Marchewka : Skladnik() {
+    override fun przygotujSkladnij() {
+        this.obierz()
+        this.pokroj()
+    }
 
     override fun toString(): String {
         return "marchewka"

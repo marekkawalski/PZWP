@@ -1,27 +1,17 @@
 fun main() {
-    przygotujZupe()
+    val kucharz = Kucharz()
+    val kelner = Kelner()
+    val kurier = Kurier()
+    kurier.adres = "Akademicka 16 Gliwice"
+    przygotuj(kucharz, kelner)
+    przygotuj(kucharz, kurier)
 }
 
-fun przygotujZupe() {
-    val zupa = Zupa()
-    val marchewka = Marchewka()
-    val ryz = Ryz()
-    zupa.skladniki.add(marchewka)
-    val makaron = Makaron()
-    zupa.skladniki.add(ryz)
-    //        zupa.przygotuj();
-    zupa.przygotujZuperPomidorowa()
-
-//        zupa.podaj();
-    zupa.wyslij("Akademcika 16 Gliwice")
-}
-
-fun przygotujZupePomidorowaZRyzemNaWynos() {
-    val zupa = Zupa()
-    val marchewka = Marchewka()
-    val ryz = Ryz()
-    zupa.skladniki.add(marchewka)
-    zupa.skladniki.add(ryz)
-    zupa.przygotujZuperPomidorowa()
-    zupa.wyslij("Akademcika 16 Gliwice")
+fun przygotuj(kucharz: IKucharz, dostarczycielJedzenia: IPodanieJedzenia) {
+    val zupa = Zupa("Rosol")
+    zupa.skladniki.addAll(
+        listOf(KoncentratPomidorowy(), Marchewka(), Makaron())
+    )
+    kucharz.przygotujZupe(zupa)
+    dostarczycielJedzenia.podajJedzenie(zupa.nazwa)
 }

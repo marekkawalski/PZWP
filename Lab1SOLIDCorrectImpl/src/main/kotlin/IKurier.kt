@@ -1,0 +1,2 @@
+interface IKurier : IPodanieJedzenia {
+}
