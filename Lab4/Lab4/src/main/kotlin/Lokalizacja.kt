@@ -1,0 +1,2 @@
+class Lokalizacja : Skladnik {
+}
