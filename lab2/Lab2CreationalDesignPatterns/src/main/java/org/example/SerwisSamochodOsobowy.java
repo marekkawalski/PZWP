@@ -1,8 +1,8 @@
 package org.example;
 
-public class SerwisSamochodOsobowy extends Serwis{
+public class SerwisSamochodOsobowy implements Serwis {
     @Override
-    ISamochod createSamochod() {
+    public ISamochod createSamochod() {
         return new SamochodOsobowy();
     }
 }

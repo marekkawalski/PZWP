@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Faktura {
 	private String kontrahent;
-	private List<Pozycja> pozycje = new ArrayList<Pozycja>();
+	private List<Pozycja> pozycje = new ArrayList<>();
+	private List<PozycjaJavaBean> pozycjeJavaBean = new ArrayList<>();
 	public String getKontrahent() {
 		return kontrahent;
 	}
@@ -14,6 +15,9 @@ public class Faktura {
 	}
 	public List<Pozycja> getPozycje() {
 		return pozycje;
+	}
+	public List<PozycjaJavaBean> getPozycjeJavaBeans(){
+		return pozycjeJavaBean;
 	}
 	
 }

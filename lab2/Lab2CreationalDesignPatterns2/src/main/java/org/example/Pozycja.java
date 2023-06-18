@@ -1,7 +1,7 @@
 package org.example;
 
 public class Pozycja {
-	private Pozycja(Builder builder) {
+	private Pozycja(final Builder builder) {
 		this.opis = builder.opis;
 		this.ilosc = builder.ilosc;
 		this.cena = builder.cena;
@@ -24,15 +24,15 @@ public class Pozycja {
 			this.opis = opis;
 			this.ilosc = ilosc;
 		}
-		public Builder cena(double cena){
+		public Builder cena(final double cena){
 			this.cena = cena;
 			return this;
 		}
-		public Builder vat(int vat){
+		public Builder vat(final int vat){
 			this.vat = vat;
 			return this;
 		}
-		public Builder ku(String ku){
+		public Builder ku(final String ku){
 			this.ku = ku;
 			return this;
 		}
