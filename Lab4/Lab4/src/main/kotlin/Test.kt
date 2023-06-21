@@ -1,15 +1,19 @@
-fun main(){
-    val s: IElement = Location("Polska")
-    var l = Location("Krakow")
-    s.addElement(l)
-    val l2 = Location("Krakow Plaszow")
-    l.addElement(l2)
-    l = l2
-    l.addElement(Car("Fiat"))
-    l.addElement(Car("Opel"))
-    l = Location("Warszawa")
-    l.addElement(Car("Mercedes"))
-    s.addElement(l)
-    s.addElement(Car("Ford"))
-    s.info()
+fun main() {
+    val s: ISkladnik = Lokalizacja("Polska")
+    var l: Lokalizacja = Lokalizacja("Kraków")
+    s.dodajElement(l)
+    l.dodajElement(Samochod("Fiat"))
+    l.dodajElement(Samochod("Opel"))
+    l = Lokalizacja("Warszawa")
+    l.dodajElement(Samochod("Mercedes"))
+    s.dodajElement(l)
+    s.dodajElement(Samochod("Ford"))
+    s.wypiszInfo()
+
+    println("\n\n")
+    val mt = MyTree(s)
+    val it: Iterator<ISkladnik> = mt.iterator()
+    while (it.hasNext()) {
+        println(it.next().wypiszInfo())
+    }
 }
