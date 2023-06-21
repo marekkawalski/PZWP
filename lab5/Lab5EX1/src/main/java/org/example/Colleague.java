@@ -1,9 +1,9 @@
 package org.example;
 
     public abstract class Colleague {
-        private Mediator mediator;
+        private final Mediator mediator;
 
-        public Colleague(Mediator mediator) {
+        protected Colleague(Mediator mediator) {
             this.mediator = mediator;
         }
 
