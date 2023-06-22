@@ -1,10 +1,8 @@
-class ZwyklyPrzegladZKlimatyzacja : Przeglad(), Klimatyzacja {
+class PrzegladBenzynaZKlimatyzacja : Przeglad(){
 
     override fun wykonajPrzeglad(s: Samochod) {
-        println("Zaczynam przeglad z klimatyzacja samochodu $s")
+        wykoajCoreCzescPrzegladu(s)
         sprawdzKlimatyzacje(s)
-        wymienOlej(s)
-        wymienFiltry(s)
         wymienSwiece(s)
         println("Przeglad samochodu $s z klimatyzacja zakonczony")
     }

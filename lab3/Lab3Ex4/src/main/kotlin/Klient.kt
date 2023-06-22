@@ -1,22 +1,20 @@
 fun main() {
-    val zwyklyPrzegladZKlimatyzacja = ZwyklyPrzegladZKlimatyzacja()
-    var s = Samochod("Fiat Punto")
-    zwyklyPrzegladZKlimatyzacja.wykonajPrzeglad(s)
+
+    val przegladBenzyny = Przeglad()
+    var przegladKlimy = PrzegladKlimy(przegladBenzyny)
+    var przegladSwiec = SprawdzSwiece(przegladKlimy)
+    var s = Samochod("Ford Mondeo w benzynie z klimą")
+    przegladSwiec.wykonajPrzeglad(s)
     println("\n\n")
 
-    val zwyklyPrzeglad = ZwyklyPrzeglad()
-    s = Samochod("Ford Mondeo")
-    zwyklyPrzeglad.wykonajPrzeglad(s)
-    println("\n\n")
+    val przegladDiesla = Przeglad()
+    przegladKlimy = PrzegladKlimy(przegladDiesla)
+    s = Samochod("Fiat Punto w Dieslu z klimą")
+    przegladKlimy.wykonajPrzeglad(s)
 
-    val przegladDiesla = PrzegladDiesla()
-    s = Samochod("Skoda Superb")
-    przegladDiesla.wykonajPrzeglad(s)
     println("\n\n")
-
-    val przegladDieslaZKlimatyzacja = PrzegladDieslaZKlimatyzacja()
-    s = Samochod("Volvo XC 90")
-    przegladDieslaZKlimatyzacja.wykonajPrzeglad(s)
-    println("\n\n")
+    val przegladMalucha = Przeglad()
+    s = Samochod("Maluch w benzynie bez klimy")
+    przegladMalucha.wykonajPrzeglad(s)
 }
 

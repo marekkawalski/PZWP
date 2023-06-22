@@ -16,6 +16,8 @@ abstract class Przeglad {
         wymienOlej(s)
         wymienFiltry(s)
     }
+    fun sprawdzKlimatyzacje(s: Samochod) {
+        println("Sprawdzam klimatyzacje w $s")
+    }
     abstract fun wykonajPrzeglad(s: Samochod)
-
 }

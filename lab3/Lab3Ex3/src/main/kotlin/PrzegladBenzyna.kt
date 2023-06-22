@@ -1,4 +1,4 @@
-class ZwyklyPrzeglad : Przeglad() {
+class PrzegladBenzyna : Przeglad() {
     override fun wykonajPrzeglad(s: Samochod) {
         wykoajCoreCzescPrzegladu(s)
         wymienSwiece(s)

@@ -1,12 +1,12 @@
 fun main() {
-    val zwyklyPrzegladZKlimatyzacja = ZwyklyPrzegladZKlimatyzacja()
+    val przegladBenzynaZKlimatyzacja = PrzegladBenzynaZKlimatyzacja()
     var s = Samochod("Fiat Punto")
-    zwyklyPrzegladZKlimatyzacja.wykonajPrzeglad(s)
+    przegladBenzynaZKlimatyzacja.wykonajPrzeglad(s)
     println("\n\n")
 
-    val zwyklyPrzeglad = ZwyklyPrzeglad()
+    val przegladBenzyna = PrzegladBenzyna()
     s = Samochod("Ford Mondeo")
-    zwyklyPrzeglad.wykonajPrzeglad(s)
+    przegladBenzyna.wykonajPrzeglad(s)
     println("\n\n")
 
     val przegladDiesla = PrzegladDiesla()

@@ -1,4 +1,5 @@
-open class Przeglad {
+abstract class IPrzeglad {
+
     fun wymienOlej(s: Samochod) {
         println("Wymieniam olej w $s")
     }
@@ -11,11 +12,12 @@ open class Przeglad {
         println("Wymieniam filtry w $s")
     }
 
-    open fun wykonajPrzeglad(s: Samochod) {
-        println("Zaczynam przeglad z klimatyzacja samochodu $s")
+    fun wykoajCoreCzescPrzegladu(s:Samochod){
+        println("Zaczynam przeglad samochodu $s")
         wymienOlej(s)
         wymienFiltry(s)
-        wymienSwiece(s)
-        println("Przeglad samochodu $s z klimatyzacja zakonczony")
     }
+
+    abstract fun wykonajPrzeglad(s: Samochod)
+
 }

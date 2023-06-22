@@ -1,4 +1,4 @@
-class PrzegladDieslaZKlimatyzacja : Przeglad(), Klimatyzacja {
+class PrzegladDieslaZKlimatyzacja : Przeglad() {
     override fun wykonajPrzeglad(s: Samochod) {
         wykoajCoreCzescPrzegladu(s)
         sprawdzKlimatyzacje(s)
