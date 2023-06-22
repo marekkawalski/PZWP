@@ -18,5 +18,10 @@ fun main() {
     s = Samochod("Volvo XC 90")
     przegladDieslaZKlimatyzacja.wykonajPrzeglad(s)
     println("\n\n")
+
+    val przegladBenzynaKlimaCisnienie = PrzegladBenzynaKlimaCisnienie()
+    s = Samochod("Volvo XC 40")
+    przegladBenzynaKlimaCisnienie.wykonajPrzeglad(s)
+    println("\n\n")
 }
 

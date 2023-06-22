@@ -14,7 +14,8 @@ fun main() {
 
     println("\n\n")
     val przegladMalucha = Przeglad()
-    s = Samochod("Maluch w benzynie bez klimy")
-    przegladMalucha.wykonajPrzeglad(s)
+    s = Samochod("Maluch w benzynie bez klimy ze sprawdzeniem cisnienia")
+    val sprawdzCisnienie = SprawdzCisnienie(przegladMalucha)
+    sprawdzCisnienie.wykonajPrzeglad(s)
 }
 
