@@ -17,5 +17,11 @@ fun main() {
     s = Samochod("Maluch w benzynie bez klimy ze sprawdzeniem cisnienia")
     val sprawdzCisnienie = SprawdzCisnienie(przegladMalucha)
     sprawdzCisnienie.wykonajPrzeglad(s)
+
+    println("\n\n")
+    val przgladMercedesa = Przeglad()
+    s = Samochod("Mercedes w benzynie z przegladem klimy i plynow")
+    val przegladKlimyZPlynem = PrzegladKlimyZPlynem(przgladMercedesa)
+    przegladKlimyZPlynem.wykonajPrzeglad(s)
 }
 
